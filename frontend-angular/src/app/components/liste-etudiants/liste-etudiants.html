@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Liste des étudiants</h2>
+
+  <div *ngIf="loading">Chargement des données...</div>
+  <div *ngIf="error" style="color: red;">{{ error }}</div>
+
+  <table *ngIf="!loading && !error && etudiants.length > 0" border="1" cellpadding="8">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Prénom</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let e of etudiants">
+      <td>{{ e.id }}</td>
+      <td>{{ e.nom }}</td>
+      <td>{{ e.prenom }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!loading && !error && etudiants.length === 0">
+    Aucun étudiant trouvé.
+  </div>
+</div>
