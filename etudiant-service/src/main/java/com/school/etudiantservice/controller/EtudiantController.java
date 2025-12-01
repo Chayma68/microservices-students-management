@@ -1,7 +1,9 @@
 package com.school.etudiantservice.controller;
 
+import com.school.etudiantservice.clients.NotesClient;
 import com.school.etudiantservice.entity.Etudiant;
 import com.school.etudiantservice.repository.EtudiantRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -49,4 +51,13 @@ public class EtudiantController {
         etudiantRepository.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+    @Autowired
+    private NotesClient notesClient;
+
+    @GetMapping("/{id}/notes")
+    public Object getNotes(@PathVariable Long id) {
+
+        return notesClient.getNotesByEtudiant(id);
+    }
+
 }

@@ -3,9 +3,11 @@ package com.school.etudiantservice;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableDiscoveryClient   // pour s’enregistrer chez Eureka
+@EnableFeignClients(basePackages = "com.school.etudiantservice.clients")
+@EnableDiscoveryClient
 public class EtudiantServiceApplication {
 
     public static void main(String[] args) {

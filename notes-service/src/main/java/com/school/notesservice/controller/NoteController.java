@@ -1,7 +1,7 @@
-package com.school.noteservice.controller;
+package com.school.notesservice.controller;
 
-import com.school.noteservice.entity.Note;
-import com.school.noteservice.repository.NoteRepository;
+import com.school.notesservice.entity.Note;
+import com.school.notesservice.repository.NoteRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

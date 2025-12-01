@@ -1,6 +1,7 @@
-package com.school.noteservice.repository;
+package com.school.notesservice.repository;
 
-import com.school.noteservice.entity.Note;
+
+import com.school.notesservice.entity.Note;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 public interface NoteRepository extends JpaRepository<Note, Long> {
