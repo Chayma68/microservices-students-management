@@ -9,6 +9,7 @@
         <module name="absence-service" />
         <module name="eureka-server" />
         <module name="etudiant-service" />
+        <module name="gateway-service" />
       </profile>
       <profile name="Annotation profile for microservices-students-management" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -26,6 +27,7 @@
       <module name="absence-service" options="-parameters" />
       <module name="etudiant-service" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
+      <module name="gateway-service" options="-parameters" />
       <module name="notes-service" options="-parameters" />
     </option>
   </component>

@@ -15,6 +15,7 @@
         <module>notes-service</module>
         <module>absence-service</module>
         <module>eureka-server</module>
+        <module>gateway-service</module>
     </modules>
 
     <properties>
