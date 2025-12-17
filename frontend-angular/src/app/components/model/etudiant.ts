@@ -7,8 +7,9 @@ export interface Etudiant {
   id: number;
   nom: string;
   prenom: string;
-  cne: string;
-  filiere: string;
+  cne?: string;
+  filiere?: string;
+  email?: string;
 }
 
 export interface Note {
